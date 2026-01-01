@@ -357,13 +357,13 @@ export default function Dashboard() {
               >
                 <HelpCircle className="w-5 h-5" />
               </Link>
-              <a
+              <Link
                 href="/settings"
                 className="p-2 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 transition-colors"
                 title="Settings"
               >
                 <Settings className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
