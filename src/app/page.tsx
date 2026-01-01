@@ -626,18 +626,15 @@ export default function Dashboard() {
                 </div>
 
                 {tools['automaker'].status === 'running' && (
-                  <div className="p-4 rounded-xl bg-zinc-950 border border-zinc-800">
-                    <div className="text-xs font-medium text-zinc-500 mb-2">Access via SSH Tunnel</div>
-                    <p className="text-xs text-zinc-400 mb-2">
-                      Automaker runs on the server. To access, create an SSH tunnel:
-                    </p>
-                    <code className="block text-xs bg-zinc-800 p-2 rounded font-mono text-amber-400">
-                      ssh -L 3007:localhost:3007 root@intelliagent.site
-                    </code>
-                    <p className="text-xs text-zinc-400 mt-2">
-                      Then open <span className="text-amber-400">http://localhost:3007</span> in your browser.
-                    </p>
-                  </div>
+                  <a
+                    href="https://maker.intelliagent.site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-amber-400 font-medium transition-all"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Open Automaker UI
+                  </a>
                 )}
 
                 {tools['automaker'].output && (
